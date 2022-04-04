@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://buffoon-j.github.io</id>
+    <title>Buffoon&apos;s world</title>
+    <updated>2022-04-04T21:35:56.050Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://buffoon-j.github.io"/>
+    <link rel="self" href="https://buffoon-j.github.io/atom.xml"/>
+    <subtitle>一枚菜鸟的博客</subtitle>
+    <logo>https://buffoon-j.github.io/images/avatar.png</logo>
+    <icon>https://buffoon-j.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, Buffoon&apos;s world</rights>
+    <entry>
+        <title type="html"><![CDATA[匿名代码块与static代码块]]></title>
+        <id>https://buffoon-j.github.io/post/ni-ming-dai-ma-kuai-yu-static-dai-ma-kuai/</id>
+        <link href="https://buffoon-j.github.io/post/ni-ming-dai-ma-kuai-yu-static-dai-ma-kuai/">
+        </link>
+        <updated>2021-04-25T05:40:35.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="匿名代码块与static代码块">匿名代码块与static代码块</h1>
+<h2 id="补充static关键词中关于静态方法块的内容-sup1sup">补充<code>static</code>关键词中关于静态方法块的内容。<a href="#refer-anchor-1"><sup>[1]</sup></a></h2>
+<p>首先看一下测试代码</p>
+<pre><code class="language-Java">public class Person {
+//    构造方法
+    Person(){
+        System.out.println(&quot;构造方法&quot;);
+    }
+
+//    匿名方法块
+    {
+        System.out.println(&quot;匿名方法块&quot;);
+    }
+
+//    static方法块
+    static {
+        System.out.println(&quot;静态方法块&quot;);
+    }
+}
+
+
+class Test {
+    public static void main(String[] args) {
+        Person person1 = new Person();
+        System.out.println(&quot;=======================&quot;);
+        Person person2 = new Person();
+    }
+}
+</code></pre>
+<p>运行结果：</p>
+<figure data-type="image" tabindex="1"><img src="https://buffoon-j.github.io/post-images/1649108024369.png" alt="" loading="lazy"></figure>
+<p>由运行结果可知：</p>
+<ul>
+<li>
+<p>在类初次被加载的时候，会最先加载<strong>静态方法块</strong>，然后加载<strong>匿名方法块</strong>，最后在加载<strong>构造方法</strong>。</p>
+</li>
+<li>
+<p>但静态方法块只会加载一次，在第二次加载类时，只会加载先加载匿名方法块和构造方法。</p>
+</li>
+<li>
+<p>所以也可以用匿名代码块来进行一些初始赋值，一些只进行一次的操作则放在静态代码块里。</p>
+</li>
+</ul>
+<h2 id="参考">参考</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3689313"> <a href="https://www.bilibili.com/video/BV12J41137hu?p=73">遇见狂神说.  面向对象14：static关键字详解<label class="task-list-item-label" for="task-item-3689313"> [遇见狂神说.  面向对象14：static关键字详解](https://www.bilibili.com/video/BV12J41137hu?p=73)</label></li>
+</ul>
+]]></content>
+    </entry>
+</feed>
