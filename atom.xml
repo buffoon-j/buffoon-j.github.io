@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buffoon-j.github.io</id>
     <title>Buffoon&apos;s world</title>
-    <updated>2022-04-04T22:23:37.072Z</updated>
+    <updated>2022-04-05T07:29:46.090Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buffoon-j.github.io"/>
     <link rel="self" href="https://buffoon-j.github.io/atom.xml"/>
@@ -10,6 +10,124 @@
     <logo>https://buffoon-j.github.io/images/avatar.png</logo>
     <icon>https://buffoon-j.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Buffoon&apos;s world</rights>
+    <entry>
+        <title type="html"><![CDATA[求立方体类Box的变面积和体积]]></title>
+        <id>https://buffoon-j.github.io/post/qiu-li-fang-ti-lei-box-de-bian-mian-ji-he-ti-ji/</id>
+        <link href="https://buffoon-j.github.io/post/qiu-li-fang-ti-lei-box-de-bian-mian-ji-he-ti-ji/">
+        </link>
+        <updated>2022-04-05T07:27:48.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="求立方体类box的变面积和体积">求立方体类Box的变面积和体积</h1>
+<h2 id="题目">题目</h2>
+<p>此题作为重学JavaSE的第一道基础题。</p>
+<blockquote>
+<p>设计一个立方体类Box，定义三个属性，分别是长，宽，高。定义二个方法，分别计算并输出立方体的体积和表面积。</p>
+</blockquote>
+<h2 id="代码">代码</h2>
+<pre><code class="language-java">//Box.java
+public class Box {
+    private int width;
+    private int height;
+    private int length;
+    private int area;
+    private int volume;
+
+    public Box(int width, int height, int length) {
+        this.width = width;
+        this.height = height;
+        this.length = length;
+    }
+
+    public Box() {
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getArea() {
+        return area;
+    }
+
+    public void setArea(int area) {
+        this.area = area;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+}
+
+</code></pre>
+<pre><code class="language-java">//Calculator.java
+public class Calculator {
+    public static int area(int length, int width, int height) {
+        int area = length * width + length * height + width * height;
+        area *= 2;
+        return area;
+    }
+    public static int volume(int length, int width, int height) {
+        int volume = length * width * height;
+        return volume;
+    }
+}
+</code></pre>
+<pre><code class="language-java">//Operator.java
+import java.util.Scanner;
+
+public class Operator {
+    public void operate(Box box){
+        Scanner scanner = new Scanner(System.in);
+        int length = scanner.nextInt();
+        int width = scanner.nextInt();
+        int height = scanner.nextInt();
+        box.setArea(Calculator.area(length, width, height));
+        box.setVolume(Calculator.volume(length, width, height));
+        scanner.close();
+
+    }
+}
+</code></pre>
+<pre><code class="language-java">//Main.java
+public class Main {
+    public static void main(String[] args) {
+        Operator operator = new Operator();
+        Box box = new Box();
+        operator.operate(box);
+        System.out.println(&quot;area: &quot; + box.getArea() + &quot;\nvolume: &quot; + box.getVolume());
+    }
+
+}
+</code></pre>
+<h2 id="运行结果">运行结果</h2>
+<figure data-type="image" tabindex="1"><img src="https://buffoon-j.github.io/post-images/1649143708631.png" alt="" loading="lazy"></figure>
+<h2 id="总结">总结</h2>
+<p>对好多基础知识仍不熟悉，这源于在一开始学习Java时的不认真，重学Java的计划仍需不断推进。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[IDEA中Maven配置问题]]></title>
         <id>https://buffoon-j.github.io/post/idea-zhong-maven-pei-zhi-wen-ti/</id>

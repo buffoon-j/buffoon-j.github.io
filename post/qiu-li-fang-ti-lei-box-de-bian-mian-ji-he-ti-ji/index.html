@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>求立方体类Box的变面积和体积 | Buffoon&#39;s world</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://buffoon-j.github.io/favicon.ico?v=1649143777935">
+<link rel="stylesheet" href="https://buffoon-j.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="求立方体类Box的变面积和体积
+题目
+此题作为重学JavaSE的第一道基础题。
+
+设计一个立方体类Box，定义三个属性，分别是长，宽，高。定义二个方法，分别计算并输出立方体的体积和表面积。
+
+代码
+//Box.java
+public cla..." />
+    <meta name="keywords" content="基础题,JavaSE" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://buffoon-j.github.io">
+        <img src="https://buffoon-j.github.io/images/avatar.png?v=1649143777935" class="site-logo">
+        <h1 class="site-title">Buffoon&#39;s world</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      一枚菜鸟的博客
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://buffoon-j.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">求立方体类Box的变面积和体积</h2>
+            <div class="post-date">2022-04-05</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="求立方体类box的变面积和体积">求立方体类Box的变面积和体积</h1>
+<h2 id="题目">题目</h2>
+<p>此题作为重学JavaSE的第一道基础题。</p>
+<blockquote>
+<p>设计一个立方体类Box，定义三个属性，分别是长，宽，高。定义二个方法，分别计算并输出立方体的体积和表面积。</p>
+</blockquote>
+<h2 id="代码">代码</h2>
+<pre><code class="language-java">//Box.java
+public class Box {
+    private int width;
+    private int height;
+    private int length;
+    private int area;
+    private int volume;
+
+    public Box(int width, int height, int length) {
+        this.width = width;
+        this.height = height;
+        this.length = length;
+    }
+
+    public Box() {
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getArea() {
+        return area;
+    }
+
+    public void setArea(int area) {
+        this.area = area;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+}
+
+</code></pre>
+<pre><code class="language-java">//Calculator.java
+public class Calculator {
+    public static int area(int length, int width, int height) {
+        int area = length * width + length * height + width * height;
+        area *= 2;
+        return area;
+    }
+    public static int volume(int length, int width, int height) {
+        int volume = length * width * height;
+        return volume;
+    }
+}
+</code></pre>
+<pre><code class="language-java">//Operator.java
+import java.util.Scanner;
+
+public class Operator {
+    public void operate(Box box){
+        Scanner scanner = new Scanner(System.in);
+        int length = scanner.nextInt();
+        int width = scanner.nextInt();
+        int height = scanner.nextInt();
+        box.setArea(Calculator.area(length, width, height));
+        box.setVolume(Calculator.volume(length, width, height));
+        scanner.close();
+
+    }
+}
+</code></pre>
+<pre><code class="language-java">//Main.java
+public class Main {
+    public static void main(String[] args) {
+        Operator operator = new Operator();
+        Box box = new Box();
+        operator.operate(box);
+        System.out.println(&quot;area: &quot; + box.getArea() + &quot;\nvolume: &quot; + box.getVolume());
+    }
+
+}
+</code></pre>
+<h2 id="运行结果">运行结果</h2>
+<figure data-type="image" tabindex="1"><img src="https://buffoon-j.github.io/post-images/1649143708631.png" alt="" loading="lazy"></figure>
+<h2 id="总结">总结</h2>
+<p>对好多基础知识仍不熟悉，这源于在一开始学习Java时的不认真，重学Java的计划仍需不断推进。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://buffoon-j.github.io/tag/LCKMij1cn/" class="tag">
+                    基础题
+                  </a>
+                
+                  <a href="https://buffoon-j.github.io/tag/K5xr0u5_H/" class="tag">
+                    JavaSE
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://buffoon-j.github.io/post/idea-zhong-maven-pei-zhi-wen-ti/">
+                  <h3 class="post-title">
+                    IDEA中Maven配置问题
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'e0a8bcdd2f0356df91af',
+        clientSecret: '497ad83f2e058a1ba457662f75d810e2678d9c32',
+        repo: 'comments-of-blogs',
+        owner: 'buffoon-j',
+        admin: ['buffoon-j'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
