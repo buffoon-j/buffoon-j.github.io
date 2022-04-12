@@ -670,88 +670,69 @@ ul.markdownIt-TOC {
   padding: 0;
 }
 /*
-
-Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
-
-*/
+ * Visual Studio 2015 dark style
+ * Author: Nicolas LLOBERA <nllobera@gmail.com>
+ */
 .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #292A30;
-  color: #839496;
+  background: #1E1E1E;
+  color: #DCDCDC;
 }
-code.hljs {
-  padding: 15px 20px;
-  line-height: 1.5;
-  font-size: 14px;
-  margin-bottom: 2.2em;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
-  border-radius: 15px;
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol,
+.hljs-name {
+  color: #569CD6;
 }
-.hljs-title {
-  color: #6BDFFF;
+.hljs-link {
+  color: #569CD6;
+  text-decoration: underline;
+}
+.hljs-built_in,
+.hljs-type {
+  color: #4EC9B0;
+}
+.hljs-number,
+.hljs-class {
+  color: #B8D7A3;
+}
+.hljs-string,
+.hljs-meta .hljs-string {
+  color: #D69D85;
+}
+.hljs-regexp,
+.hljs-template-tag {
+  color: #9A5334;
+}
+.hljs-subst,
+.hljs-function,
+.hljs-title,
+.hljs-params,
+.hljs-formula {
+  color: #DCDCDC;
 }
 .hljs-comment,
 .hljs-quote {
-  color: #5A994B;
+  color: #57A64A;
+  font-style: italic;
 }
-.hljs-type,
-.hljs-literal {
-  color: #DABAFF;
+.hljs-doctag {
+  color: #608B4E;
 }
-.hljs-number {
-  color: #CEBF77;
-}
-.hljs-built_in {
-  color: #B281EB;
-}
-/* Solarized Green */
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-addition {
-  color: #FF7AB2;
-  font-weight: 600;
-}
-/* Solarized Cyan */
-.hljs-string,
-.hljs-meta .hljs-meta-string,
-.hljs-doctag,
-.hljs-regexp {
-  color: #2aa198;
-}
-/* Solarized Blue */
-.hljs-section,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class {
-  color: #4EB0CC;
-}
-/* Solarized Yellow */
-.hljs-attribute,
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-class {
-  color: #b58900;
-}
-/* Solarized Orange */
-.hljs-symbol,
-.hljs-bullet,
-.hljs-subst,
 .hljs-meta,
 .hljs-meta .hljs-keyword,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-link {
-  color: #cb4b16;
+.hljs-tag {
+  color: #9B9B9B;
 }
-/* Solarized Red */
-.hljs-deletion {
-  color: #dc322f;
+.hljs-variable,
+.hljs-template-variable {
+  color: #BD63C5;
 }
-.hljs-formula {
-  background: #073642;
+.hljs-attr,
+.hljs-attribute {
+  color: #9CDCFE;
+}
+.hljs-section {
+  color: gold;
 }
 .hljs-emphasis {
   font-style: italic;
@@ -759,28 +740,26 @@ code.hljs {
 .hljs-strong {
   font-weight: bold;
 }
-/* 代码滑块 */
-pre::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/*.hljs-code {
+    font-family:'Monospace';
+  }*/
+.hljs-bullet,
+.hljs-selector-tag,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #D7BA7D;
 }
-pre::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: #cbcbcb;
+.hljs-addition {
+  background-color: #144212;
+  display: inline-block;
+  width: 100%;
 }
-pre::-webkit-scrollbar-thumb:hover {
-  background-color: #bbb;
-}
-code::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-code::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-  background-color: #cbcbcb;
-}
-code::-webkit-scrollbar-thumb:hover {
-  background-color: #bbb;
+.hljs-deletion {
+  background-color: #600;
+  display: inline-block;
+  width: 100%;
 }
 #landlord {
   left: 0;
