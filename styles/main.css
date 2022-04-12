@@ -669,97 +669,80 @@ ul.markdownIt-TOC {
 .toc-container .markdownIt-TOC ul {
   padding: 0;
 }
-/*
- * Visual Studio 2015 dark style
- * Author: Nicolas LLOBERA <nllobera@gmail.com>
- */
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+code.hljs {
+  padding: 3px 5px;
+}
 .hljs {
-  background: #1E1E1E;
-  color: #DCDCDC;
+  color: #e0e2e4;
+  background: #282b2e;
 }
 .hljs-keyword,
 .hljs-literal,
-.hljs-symbol,
-.hljs-name {
-  color: #569CD6;
+.hljs-selector-id,
+.hljs-selector-tag {
+  color: #93c763;
 }
-.hljs-link {
-  color: #569CD6;
-  text-decoration: underline;
+.hljs-number {
+  color: #ffcd22;
 }
+.hljs-attribute {
+  color: #668bb0;
+}
+.hljs-link,
+.hljs-regexp {
+  color: #d39745;
+}
+.hljs-meta {
+  color: #557182;
+}
+.hljs-addition,
 .hljs-built_in,
-.hljs-type {
-  color: #4EC9B0;
-}
-.hljs-number,
-.hljs-class {
-  color: #B8D7A3;
+.hljs-bullet,
+.hljs-emphasis,
+.hljs-name,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-subst,
+.hljs-tag,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: #8cbbad;
 }
 .hljs-string,
-.hljs-meta .hljs-string {
-  color: #D69D85;
-}
-.hljs-regexp,
-.hljs-template-tag {
-  color: #9A5334;
-}
-.hljs-subst,
-.hljs-function,
-.hljs-title,
-.hljs-params,
-.hljs-formula {
-  color: #DCDCDC;
+.hljs-symbol {
+  color: #ec7600;
 }
 .hljs-comment,
+.hljs-deletion,
 .hljs-quote {
-  color: #57A64A;
-  font-style: italic;
+  color: #818e96;
 }
-.hljs-doctag {
-  color: #608B4E;
+.hljs-selector-class {
+  color: #a082bd;
 }
-.hljs-meta,
-.hljs-meta .hljs-keyword,
-.hljs-tag {
-  color: #9B9B9B;
-}
-.hljs-variable,
-.hljs-template-variable {
-  color: #BD63C5;
-}
-.hljs-attr,
-.hljs-attribute {
-  color: #9CDCFE;
-}
-.hljs-section {
-  color: gold;
-}
-.hljs-emphasis {
-  font-style: italic;
-}
-.hljs-strong {
-  font-weight: bold;
-}
-/*.hljs-code {
-    font-family:'Monospace';
-  }*/
-.hljs-bullet,
+.hljs-doctag,
+.hljs-keyword,
+.hljs-literal,
+.hljs-name,
+.hljs-section,
 .hljs-selector-tag,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #D7BA7D;
+.hljs-strong,
+.hljs-title,
+.hljs-type {
+  font-weight: 700;
 }
-.hljs-addition {
-  background-color: #144212;
-  display: inline-block;
-  width: 100%;
-}
-.hljs-deletion {
-  background-color: #600;
-  display: inline-block;
-  width: 100%;
+.hljs-class .hljs-title,
+.hljs-code,
+.hljs-section,
+.hljs-title.class_ {
+  color: #fff;
 }
 #landlord {
   left: 0;
