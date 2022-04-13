@@ -938,6 +938,13 @@ header.masthead .row .site-heading h1 {
 #vcomments .vcards .vcard .vh .vcontent p {
   text-align: left;
 }
+#vcomments .vpanel .vwrap {
+  padding: 15px 20px 0 20px;
+  border-radius: 5px;
+  border: 1px solid #dedede;
+  margin-bottom: 15px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.12);
+}
 #vcomments .vcards .vcard {
   padding: 15px 20px 0 20px;
   border-radius: 10px;
