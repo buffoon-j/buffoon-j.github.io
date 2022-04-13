@@ -938,6 +938,42 @@ header.masthead .row .site-heading h1 {
 #vcomments .vcards .vcard .vh .vcontent p {
   text-align: left;
 }
+#vcomments .vheader .vnick {
+  width: 30%;
+  border: 2px solid #dedede;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+#vcomments .vheader .vmail {
+  width: 30%;
+  border: 2px solid #dedede;
+  margin-left: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+#vcomments .vheader .vlink {
+  width: 30%;
+  border: 2px solid #dedede;
+  margin-left: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+#vcomments .veditor {
+  width: 100%;
+  border: 2px solid #dedede;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+#vcomments .vwrap {
+  border: 0px solid #dedede;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 0px;
+}
 #vcomments .vcards .vcard {
   padding: 15px 20px 0 20px;
   border-radius: 10px;
@@ -951,29 +987,6 @@ header.masthead .row .site-heading h1 {
 #vcomments .vcards .vcard .vh .vcard {
   border: none;
   box-shadow: none;
-}
-#vcomments .vheader .vnick {
-  width: 31%;
-  border: 2px solid #dedede;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
-}
-#vcomments .vheader .vmail {
-  width: 31%;
-  border: 2px solid #dedede;
-  margin-left: 34px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
-}
-#vcomments .vheader .vlink {
-  width: 31%;
-  border: 2px solid #dedede;
-  margin-left: 34px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
 }
 .searched-keyword {
   color: red;
