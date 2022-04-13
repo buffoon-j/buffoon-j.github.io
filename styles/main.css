@@ -938,6 +938,29 @@ header.masthead .row .site-heading h1 {
 #vcomments .vcards .vcard .vh .vcontent p {
   text-align: left;
 }
+.vcomments .vheader .vnick {
+  width: 31%;
+  border: 2px solid #dedede;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+.vcomments .vheader .vmail {
+  width: 31%;
+  border: 2px solid #dedede;
+  margin-left: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+.vcomments .vheader .vlink {
+  width: 31%;
+  border: 2px solid #dedede;
+  margin-left: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
 .searched-keyword {
   color: red;
 }
