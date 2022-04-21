@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buffoon-j.github.io</id>
     <title>Buffoon&apos;s world</title>
-    <updated>2022-04-15T03:43:13.186Z</updated>
+    <updated>2022-04-21T01:57:50.940Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buffoon-j.github.io"/>
     <link rel="self" href="https://buffoon-j.github.io/atom.xml"/>
@@ -10,6 +10,277 @@
     <logo>https://buffoon-j.github.io/images/avatar.png</logo>
     <icon>https://buffoon-j.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Buffoon&apos;s world</rights>
+    <entry>
+        <title type="html"><![CDATA[六个简单常见的基础题]]></title>
+        <id>https://buffoon-j.github.io/post/liu-ge-jian-dan-chang-jian-de-ji-chu-ti/</id>
+        <link href="https://buffoon-j.github.io/post/liu-ge-jian-dan-chang-jian-de-ji-chu-ti/">
+        </link>
+        <updated>2022-04-21T01:53:59.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="六个简单常见的基础题">六个简单常见的基础题</h1>
+<h2 id="斐波那契数列">斐波那契数列</h2>
+<h3 id="描述">描述</h3>
+<p>大家都知道斐波那契数列，现在要求输入一个正整数 <code>n</code>，请你输出斐波那契数列的第 n 项。</p>
+<p>斐波那契数列具体为：1，1，2，3，5，8，13，...<br>
+即从第三项开始每一项为前两项的和。</p>
+<h3 id="输入描述">输入描述：</h3>
+<p>一个正整数<code>n</code></p>
+<h3 id="输出描述">输出描述：</h3>
+<p>输出一个正整数。</p>
+<pre><code class="language-java">import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        int n, a, b, c;  
+        a = 1;  
+        b = 1;  
+        c = 2;  
+        Scanner scanner = new Scanner(System.in);  
+        n = scanner.nextInt();  
+        for (int i = 0; i &lt; n - 1; i++) {  
+            if(n == 1 || n == 2) {  
+                break;  
+            } else {  
+//                在这个循环开始之前，第i项为a，b为第i+1项，c为第i+2项  
+                c = a + b;  
+                a = b;  
+                b = c;  
+            }  
+        }  
+        System.out.println(a);  
+    }  
+}
+</code></pre>
+<h2 id="求最大公约数和最小公倍数">求最大公约数和最小公倍数</h2>
+<h3 id="描述-2">描述：</h3>
+<p>输入两个正整数,求这两个数的最大公约数和最小公倍数。</p>
+<h3 id="输入描述-2">输入描述：</h3>
+<p>两个正整数<code>m</code>，<code>n</code></p>
+<h3 id="输出描述-2">输出描述：</h3>
+<p>m，n的最大公约数和最小公倍数</p>
+<pre><code class="language-Java">import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        int m, n;  
+        Scanner scanner = new Scanner(System.in);  
+        m = scanner.nextInt();  
+        n = scanner.nextInt();  
+//        最大公约数  
+        for (int i = Math.min(m, n); i &gt; 0; i--) {  
+            if (m % i == 0 &amp;&amp; n % i == 0) {  
+                System.out.print(i + &quot; &quot;);  
+                break;            }  
+        }  
+//        最小公倍数  
+        for (int i = 1; i &lt;= n; i++) {  
+            if ((m * i) % n == 0) {  
+                System.out.print(m * i);  
+                break;            }  
+        }  
+    }  
+}
+</code></pre>
+<h2 id="数组排序">数组排序</h2>
+<h3 id="描述-3">描述</h3>
+<p>输入一个正整数<code>n</code>,输入一个含<code>n</code>个元素数组，按对这个数进行从小到大的排序。数组长度为0-20。</p>
+<h3 id="输入描述-3">输入描述：</h3>
+<p>数组元素个数<code>n</code> 和 数组元素</p>
+<h3 id="输出描述-3">输出描述</h3>
+<p>排好序的若干整数</p>
+<pre><code class="language-Java">import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        int n;  
+        int[] arr = new int[20];  
+        Scanner scanner = new Scanner(System.in);  
+        n = scanner.nextInt();  
+        for (int i = 0; i &lt; n; i++) {  
+            arr[i] = scanner.nextInt();  
+        }  
+        for (int i = 0; i &lt; n; i++) {  
+            for (int j = 0; j &lt; n - 1 - i; j++) {  
+                if (arr[j] &gt; arr[j+1]) {  
+                    int exchange;  
+                    exchange = arr[j];  
+                    arr[j] = arr[j+1];  
+                    arr[j+1] = exchange;  
+                }  
+            }  
+        }  
+        for (int i = 0; i &lt; n; i++) {  
+            System.out.printf(&quot;%d &quot;, arr[i]);  
+        }  
+    }  
+}
+</code></pre>
+<h2 id="两数之和">两数之和</h2>
+<h3 id="描述-4">描述：</h3>
+<p>给定一个数组(1, 3, 5, 7, 9, 11)，用户输入目标值<code>target</code>，请在数组中找到,两个数之和为<code>target</code>的数，返回数组下标，没有则返回<code>Not Found</code>。</p>
+<h3 id="输入描述-4">输入描述：</h3>
+<p>一个整数<code>target</code></p>
+<h3 id="输出描述-4">输出描述：</h3>
+<ul>
+<li>两个数组下标</li>
+<li>Not Found</li>
+</ul>
+<pre><code class="language-java">import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        int[] arr = {1, 3, 5, 7, 11};  
+        int left, right, target;  
+        left = 0;  
+        right = 4;  
+        target = new Scanner(System.in).nextInt();  
+        while (left &lt; right) {  
+            if(target == arr[left] + arr[right]) {  
+                break;  
+            }else if(target &lt; arr[left] + arr[right]) {  
+                right--;  
+            }else {  
+                left++;  
+            }  
+        }  
+        if (left &lt; right) {  
+            System.out.printf(&quot;%d %d&quot;, left, right);  
+        }else {  
+            System.out.println(&quot;Not Found&quot;);  
+        }  
+    }  
+}
+</code></pre>
+<h2 id="门类继承题">门类继承题</h2>
+<h3 id="描述-5">描述：</h3>
+<p>编写代码，实现如下功能：</p>
+<ol>
+<li>定义一个门类<code>Door</code>，<br>
+包含3个属性：宽度<code>width</code> 和 高度<code>height</code> ，颜色<code>color</code>。<br>
+包含2个方法：开门和关门。
+<ul>
+<li>开门方法：输出“门已经打开，请进！”。</li>
+<li>关门方法：输出“门已经关闭，禁止进入！”。</li>
+</ul>
+</li>
+<li>定义一个木头门<code>WOOD</code>，继承<code>Door</code>
+<ul>
+<li>重写父类开门方法：输出门的高度 宽度 颜色 +“门已经打开，请进！”</li>
+<li>重写父类关门方法：输出门的高度 宽度 颜色 +“门已经关闭，禁止进入！”</li>
+</ul>
+</li>
+<li>定义一个测试类，测试类定义一个<code>main</code>方法。分别创建 门对象 和 木头门对象， 为创建的木头门对象属性赋值, 调用开门和关门两个方法。</li>
+</ol>
+<pre><code class="language-Java">// Door.java
+public class Door {  
+    private int width;  
+    private int height;  
+    private String color;  
+  
+    public void openDoor() {  
+        System.out.println(&quot;门已经打开，请进！&quot;);  
+    }  
+    public void closeDoor() {  
+        System.out.println(&quot;门已经关闭，禁止进入！&quot;);  
+    }  
+  
+    public int getWidth() {  
+        return width;  
+    }  
+  
+    public void setWidth(int width) {  
+        this.width = width;  
+    }  
+  
+    public int getHeight() {  
+        return height;  
+    }  
+  
+    public void setHeight(int height) {  
+        this.height = height;  
+    }  
+  
+    public String getColor() {  
+        return color;  
+    }  
+  
+    public void setColor(String color) {  
+        this.color = color;  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Wood.java
+public class Wood extends Door {  
+    @Override  
+    public void openDoor() {  
+        System.out.printf(&quot;高度为：%d，宽度为：%d，颜色为：%s，门已经打开，请进！\n&quot;, getHeight(), getWidth(), getColor());  
+    }  
+  
+    @Override  
+    public void closeDoor() {  
+        System.out.printf(&quot;高度为：%d，宽度为：%d，颜色为：%s，门已经关闭，禁止进入！\n&quot;, getHeight(), getWidth(), getColor());  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Main.java
+public class Main {  
+    public static void main(String[] args) {  
+        Door door = new Door();  
+        door.openDoor();  
+        door.closeDoor();  
+  
+        Wood wood = new Wood();  
+        wood.setColor(&quot;橙色&quot;);  
+        wood.setHeight(5);  
+        wood.setWidth(2);  
+        wood.openDoor();  
+        wood.closeDoor();  
+    }  
+}
+</code></pre>
+<h2 id="抽象类汽车的轮子">抽象类：汽车的轮子</h2>
+<h3 id="描述-6">描述：</h3>
+<p>请创建一个抽象类 <code>Vehicle</code> ，添加 <code>NoOfWheels</code> 抽象方法，并在 <code>Vehicle</code>的子类 <code>Car</code> 和 <code>Motorbike</code> 中重写 <code>NoOfWheels</code> 方法，让其输出其有几个轮子。在测试类中分别创建两个子类的对象并调用重写的方法。</p>
+<h3 id="输入描述-5">输入描述：</h3>
+<p>无输入</p>
+<h3 id="输出描述-5">输出描述：</h3>
+<p>This car has four wheels<br>
+This Motorbike has two wheels</p>
+<pre><code class="language-Java">// Vehicle.java
+public abstract class Vehicle {  
+    public void noOfWheels() {  
+        System.out.println(&quot;The Vehicle has wheels.&quot;);  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Car.java
+public class Car extends Vehicle {  
+    @Override  
+    public void noOfWheels() {  
+        System.out.println(&quot;This car has four wheels.&quot;);  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Motorbike.java
+public class Motorbike extends Vehicle {  
+    @Override  
+    public void noOfWheels() {  
+        System.out.println(&quot;This Motorbike has two wheels.&quot;);  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Main.java
+public class Main {  
+    public static void main(String[] args) {  
+        Car car = new Car();  
+        car.noOfWheels();  
+  
+        Motorbike motorbike = new Motorbike();  
+        motorbike.noOfWheels();  
+    }  
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1.基础语法]]></title>
         <id>https://buffoon-j.github.io/post/1ji-chu-yu-fa/</id>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[Buffoon&#39;s world]的个人博客">
+<meta name="author" content="kveln">
+<title>六个简单常见的基础题 | Buffoon&#39;s world</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="六个简单常见的基础题 | Buffoon&#39;s world » Feed"
+  href="https://buffoon-j.github.io/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://buffoon-j.github.io/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+  <meta property="og:description" content="六个简单常见的基础题" />
+  <meta property="og:url" content="https://buffoon-j.github.io/post/liu-ge-jian-dan-chang-jian-de-ji-chu-ti/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Buffoon&#39;s world" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://buffoon-j.github.io">Buffoon&#39;s world</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">归档</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">标签</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/post/about">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1650506181794"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://buffoon-j.github.io">Buffoon&#39;s world</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">归档</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">标签</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/post/about">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1650506181794"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://buffoon-j.github.io/media/images/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://buffoon-j.github.io/tag/LCKMij1cn/" class="tag">基础题</a>
+                
+                <a href="https://buffoon-j.github.io/tag/K5xr0u5_H/" class="tag">JavaSE</a>
+                
+              </span>
+              <h1>六个简单常见的基础题</h1>
+              <span class="meta">
+                Posted on
+                2022-04-21，6 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <h1 id="六个简单常见的基础题">六个简单常见的基础题</h1>
+<h2 id="斐波那契数列">斐波那契数列</h2>
+<h3 id="描述">描述</h3>
+<p>大家都知道斐波那契数列，现在要求输入一个正整数 <code>n</code>，请你输出斐波那契数列的第 n 项。</p>
+<p>斐波那契数列具体为：1，1，2，3，5，8，13，...<br>
+即从第三项开始每一项为前两项的和。</p>
+<h3 id="输入描述">输入描述：</h3>
+<p>一个正整数<code>n</code></p>
+<h3 id="输出描述">输出描述：</h3>
+<p>输出一个正整数。</p>
+<pre><code class="language-java">import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        int n, a, b, c;  
+        a = 1;  
+        b = 1;  
+        c = 2;  
+        Scanner scanner = new Scanner(System.in);  
+        n = scanner.nextInt();  
+        for (int i = 0; i &lt; n - 1; i++) {  
+            if(n == 1 || n == 2) {  
+                break;  
+            } else {  
+//                在这个循环开始之前，第i项为a，b为第i+1项，c为第i+2项  
+                c = a + b;  
+                a = b;  
+                b = c;  
+            }  
+        }  
+        System.out.println(a);  
+    }  
+}
+</code></pre>
+<h2 id="求最大公约数和最小公倍数">求最大公约数和最小公倍数</h2>
+<h3 id="描述-2">描述：</h3>
+<p>输入两个正整数,求这两个数的最大公约数和最小公倍数。</p>
+<h3 id="输入描述-2">输入描述：</h3>
+<p>两个正整数<code>m</code>，<code>n</code></p>
+<h3 id="输出描述-2">输出描述：</h3>
+<p>m，n的最大公约数和最小公倍数</p>
+<pre><code class="language-Java">import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        int m, n;  
+        Scanner scanner = new Scanner(System.in);  
+        m = scanner.nextInt();  
+        n = scanner.nextInt();  
+//        最大公约数  
+        for (int i = Math.min(m, n); i &gt; 0; i--) {  
+            if (m % i == 0 &amp;&amp; n % i == 0) {  
+                System.out.print(i + &quot; &quot;);  
+                break;            }  
+        }  
+//        最小公倍数  
+        for (int i = 1; i &lt;= n; i++) {  
+            if ((m * i) % n == 0) {  
+                System.out.print(m * i);  
+                break;            }  
+        }  
+    }  
+}
+</code></pre>
+<h2 id="数组排序">数组排序</h2>
+<h3 id="描述-3">描述</h3>
+<p>输入一个正整数<code>n</code>,输入一个含<code>n</code>个元素数组，按对这个数进行从小到大的排序。数组长度为0-20。</p>
+<h3 id="输入描述-3">输入描述：</h3>
+<p>数组元素个数<code>n</code> 和 数组元素</p>
+<h3 id="输出描述-3">输出描述</h3>
+<p>排好序的若干整数</p>
+<pre><code class="language-Java">import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        int n;  
+        int[] arr = new int[20];  
+        Scanner scanner = new Scanner(System.in);  
+        n = scanner.nextInt();  
+        for (int i = 0; i &lt; n; i++) {  
+            arr[i] = scanner.nextInt();  
+        }  
+        for (int i = 0; i &lt; n; i++) {  
+            for (int j = 0; j &lt; n - 1 - i; j++) {  
+                if (arr[j] &gt; arr[j+1]) {  
+                    int exchange;  
+                    exchange = arr[j];  
+                    arr[j] = arr[j+1];  
+                    arr[j+1] = exchange;  
+                }  
+            }  
+        }  
+        for (int i = 0; i &lt; n; i++) {  
+            System.out.printf(&quot;%d &quot;, arr[i]);  
+        }  
+    }  
+}
+</code></pre>
+<h2 id="两数之和">两数之和</h2>
+<h3 id="描述-4">描述：</h3>
+<p>给定一个数组(1, 3, 5, 7, 9, 11)，用户输入目标值<code>target</code>，请在数组中找到,两个数之和为<code>target</code>的数，返回数组下标，没有则返回<code>Not Found</code>。</p>
+<h3 id="输入描述-4">输入描述：</h3>
+<p>一个整数<code>target</code></p>
+<h3 id="输出描述-4">输出描述：</h3>
+<ul>
+<li>两个数组下标</li>
+<li>Not Found</li>
+</ul>
+<pre><code class="language-java">import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        int[] arr = {1, 3, 5, 7, 11};  
+        int left, right, target;  
+        left = 0;  
+        right = 4;  
+        target = new Scanner(System.in).nextInt();  
+        while (left &lt; right) {  
+            if(target == arr[left] + arr[right]) {  
+                break;  
+            }else if(target &lt; arr[left] + arr[right]) {  
+                right--;  
+            }else {  
+                left++;  
+            }  
+        }  
+        if (left &lt; right) {  
+            System.out.printf(&quot;%d %d&quot;, left, right);  
+        }else {  
+            System.out.println(&quot;Not Found&quot;);  
+        }  
+    }  
+}
+</code></pre>
+<h2 id="门类继承题">门类继承题</h2>
+<h3 id="描述-5">描述：</h3>
+<p>编写代码，实现如下功能：</p>
+<ol>
+<li>定义一个门类<code>Door</code>，<br>
+包含3个属性：宽度<code>width</code> 和 高度<code>height</code> ，颜色<code>color</code>。<br>
+包含2个方法：开门和关门。
+<ul>
+<li>开门方法：输出“门已经打开，请进！”。</li>
+<li>关门方法：输出“门已经关闭，禁止进入！”。</li>
+</ul>
+</li>
+<li>定义一个木头门<code>WOOD</code>，继承<code>Door</code>
+<ul>
+<li>重写父类开门方法：输出门的高度 宽度 颜色 +“门已经打开，请进！”</li>
+<li>重写父类关门方法：输出门的高度 宽度 颜色 +“门已经关闭，禁止进入！”</li>
+</ul>
+</li>
+<li>定义一个测试类，测试类定义一个<code>main</code>方法。分别创建 门对象 和 木头门对象， 为创建的木头门对象属性赋值, 调用开门和关门两个方法。</li>
+</ol>
+<pre><code class="language-Java">// Door.java
+public class Door {  
+    private int width;  
+    private int height;  
+    private String color;  
+  
+    public void openDoor() {  
+        System.out.println(&quot;门已经打开，请进！&quot;);  
+    }  
+    public void closeDoor() {  
+        System.out.println(&quot;门已经关闭，禁止进入！&quot;);  
+    }  
+  
+    public int getWidth() {  
+        return width;  
+    }  
+  
+    public void setWidth(int width) {  
+        this.width = width;  
+    }  
+  
+    public int getHeight() {  
+        return height;  
+    }  
+  
+    public void setHeight(int height) {  
+        this.height = height;  
+    }  
+  
+    public String getColor() {  
+        return color;  
+    }  
+  
+    public void setColor(String color) {  
+        this.color = color;  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Wood.java
+public class Wood extends Door {  
+    @Override  
+    public void openDoor() {  
+        System.out.printf(&quot;高度为：%d，宽度为：%d，颜色为：%s，门已经打开，请进！\n&quot;, getHeight(), getWidth(), getColor());  
+    }  
+  
+    @Override  
+    public void closeDoor() {  
+        System.out.printf(&quot;高度为：%d，宽度为：%d，颜色为：%s，门已经关闭，禁止进入！\n&quot;, getHeight(), getWidth(), getColor());  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Main.java
+public class Main {  
+    public static void main(String[] args) {  
+        Door door = new Door();  
+        door.openDoor();  
+        door.closeDoor();  
+  
+        Wood wood = new Wood();  
+        wood.setColor(&quot;橙色&quot;);  
+        wood.setHeight(5);  
+        wood.setWidth(2);  
+        wood.openDoor();  
+        wood.closeDoor();  
+    }  
+}
+</code></pre>
+<h2 id="抽象类汽车的轮子">抽象类：汽车的轮子</h2>
+<h3 id="描述-6">描述：</h3>
+<p>请创建一个抽象类 <code>Vehicle</code> ，添加 <code>NoOfWheels</code> 抽象方法，并在 <code>Vehicle</code>的子类 <code>Car</code> 和 <code>Motorbike</code> 中重写 <code>NoOfWheels</code> 方法，让其输出其有几个轮子。在测试类中分别创建两个子类的对象并调用重写的方法。</p>
+<h3 id="输入描述-5">输入描述：</h3>
+<p>无输入</p>
+<h3 id="输出描述-5">输出描述：</h3>
+<p>This car has four wheels<br>
+This Motorbike has two wheels</p>
+<pre><code class="language-Java">// Vehicle.java
+public abstract class Vehicle {  
+    public void noOfWheels() {  
+        System.out.println(&quot;The Vehicle has wheels.&quot;);  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Car.java
+public class Car extends Vehicle {  
+    @Override  
+    public void noOfWheels() {  
+        System.out.println(&quot;This car has four wheels.&quot;);  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Motorbike.java
+public class Motorbike extends Vehicle {  
+    @Override  
+    public void noOfWheels() {  
+        System.out.println(&quot;This Motorbike has two wheels.&quot;);  
+    }  
+}
+</code></pre>
+<pre><code class="language-Java">// Main.java
+public class Main {  
+    public static void main(String[] args) {  
+        Car car = new Car();  
+        car.noOfWheels();  
+  
+        Motorbike motorbike = new Motorbike();  
+        motorbike.noOfWheels();  
+    }  
+}
+</code></pre>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#%E5%85%AD%E4%B8%AA%E7%AE%80%E5%8D%95%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9F%BA%E7%A1%80%E9%A2%98">六个简单常见的基础题</a>
+<ul>
+<li><a href="#%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97">斐波那契数列</a>
+<ul>
+<li><a href="#%E6%8F%8F%E8%BF%B0">描述</a></li>
+<li><a href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0">输入描述：</a></li>
+<li><a href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0">输出描述：</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0">求最大公约数和最小公倍数</a>
+<ul>
+<li><a href="#%E6%8F%8F%E8%BF%B0-2">描述：</a></li>
+<li><a href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-2">输入描述：</a></li>
+<li><a href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-2">输出描述：</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F">数组排序</a>
+<ul>
+<li><a href="#%E6%8F%8F%E8%BF%B0-3">描述</a></li>
+<li><a href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-3">输入描述：</a></li>
+<li><a href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-3">输出描述</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C">两数之和</a>
+<ul>
+<li><a href="#%E6%8F%8F%E8%BF%B0-4">描述：</a></li>
+<li><a href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-4">输入描述：</a></li>
+<li><a href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-4">输出描述：</a></li>
+</ul>
+</li>
+<li><a href="#%E9%97%A8%E7%B1%BB%E7%BB%A7%E6%89%BF%E9%A2%98">门类继承题</a>
+<ul>
+<li><a href="#%E6%8F%8F%E8%BF%B0-5">描述：</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%B1%BD%E8%BD%A6%E7%9A%84%E8%BD%AE%E5%AD%90">抽象类：汽车的轮子</a>
+<ul>
+<li><a href="#%E6%8F%8F%E8%BF%B0-6">描述：</a></li>
+<li><a href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0-5">输入描述：</a></li>
+<li><a href="#%E8%BE%93%E5%87%BA%E6%8F%8F%E8%BF%B0-5">输出描述：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://buffoon-j.github.io/post/1ji-chu-yu-fa/">
+              <span class="post-title">
+                1.基础语法&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post/liu-ge-jian-dan-chang-jian-de-ji-chu-ti/" class="leancloud_visitors"
+              data-flag-title="六个简单常见的基础题">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js'></script>
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments" class="card-content"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'MUWPVbUhlsflIPTycp1VNETB-gzGzoHsz',
+		appKey: 'xIyXvk2GGYSQYhGriyDiO5qv',
+		avatar: 'monsterid',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+            <li class="list-inline-item">
+              <a href="https://github.com/buffoon-j" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://buffoon-j.github.io/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>Buffoon&#39;s world</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://buffoon-j.github.io/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://buffoon-j.github.io/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <script src="https://buffoon-j.github.io/media/scripts/tocScript.js"></script>
+</body>
+
+</html>
