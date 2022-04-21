@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buffoon-j.github.io</id>
     <title>Buffoon&apos;s world</title>
-    <updated>2022-04-21T01:57:50.940Z</updated>
+    <updated>2022-04-21T03:14:49.299Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buffoon-j.github.io"/>
     <link rel="self" href="https://buffoon-j.github.io/atom.xml"/>
@@ -69,13 +69,15 @@ public class Main {
         for (int i = Math.min(m, n); i &gt; 0; i--) {  
             if (m % i == 0 &amp;&amp; n % i == 0) {  
                 System.out.print(i + &quot; &quot;);  
-                break;            }  
+                break;
+            }  
         }  
 //        最小公倍数  
         for (int i = 1; i &lt;= n; i++) {  
             if ((m * i) % n == 0) {  
                 System.out.print(m * i);  
-                break;            }  
+                break; 
+           }  
         }  
     }  
 }
