@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buffoon-j.github.io</id>
     <title>Buffoon&apos;s world</title>
-    <updated>2022-04-21T03:14:49.299Z</updated>
+    <updated>2022-04-23T08:21:34.988Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buffoon-j.github.io"/>
     <link rel="self" href="https://buffoon-j.github.io/atom.xml"/>
@@ -248,10 +248,8 @@ public class Main {
 <p>This car has four wheels<br>
 This Motorbike has two wheels</p>
 <pre><code class="language-Java">// Vehicle.java
-public abstract class Vehicle {  
-    public void noOfWheels() {  
-        System.out.println(&quot;The Vehicle has wheels.&quot;);  
-    }  
+public abstract class Vehicle {
+    public abstract void noOfWheels();
 }
 </code></pre>
 <pre><code class="language-Java">// Car.java
