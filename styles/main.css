@@ -943,7 +943,7 @@ header.masthead .row .site-heading h1 {
   box-sizing: border-box;
 }
 #vcomments .vwrap {
-  background: url("https://raw.githubusercontent.com/buffoon-j/images/master/comment_bg.png") 100% 100% no-repeat;
+  background: url("https://cdn.jsdelivr.net/gh/buffoon-j/images/comment_bg.png") 100% 100% no-repeat;
   background-size: 100% 100%;
   box-sizing: border-box;
   padding: 0 0 44px;
