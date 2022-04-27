@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buffoon-j.github.io</id>
     <title>Buffoon&apos;s world</title>
-    <updated>2022-04-27T09:40:15.137Z</updated>
+    <updated>2022-04-27T09:41:08.035Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buffoon-j.github.io"/>
     <link rel="self" href="https://buffoon-j.github.io/atom.xml"/>
@@ -987,7 +987,7 @@ public class Main {
         </link>
         <updated>2021-04-25T05:40:35.000Z</updated>
         <content type="html"><![CDATA[<h1 id="匿名代码块与static代码块">匿名代码块与static代码块</h1>
-<h2 id="补充static关键词中关于静态方法块的内容-sup1sup">补充<code>static</code>关键词中关于静态方法块的内容。<a href="#refer-anchor-1"><sup>[1]</sup></a></h2>
+<h2 id="补充static关键词中关于静态方法块的内容">补充<code>static</code>关键词中关于静态方法块的内容。</h2>
 <p>首先看一下测试代码</p>
 <pre><code class="language-Java">public class Person {
 //    构造方法
