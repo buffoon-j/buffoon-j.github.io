@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buffoon-j.github.io</id>
     <title>Buffoon&apos;s world</title>
-    <updated>2022-04-27T08:34:03.392Z</updated>
+    <updated>2022-04-27T09:05:32.999Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buffoon-j.github.io"/>
     <link rel="self" href="https://buffoon-j.github.io/atom.xml"/>
@@ -1029,7 +1029,11 @@ class Test {
 <p>所以也可以用匿名代码块来进行一些初始赋值，一些只进行一次的操作则放在静态代码块里。</p>
 </li>
 </ul>
-<p>学习之后的补充：匿名代码块之所以会先于构造方法执行，是因为编译器会将匿名代码块复制到每个构造方法的头部。</p>
+<p>学习之后的原理补充：</p>
+<ul>
+<li>静态代码块是在这个类被初始化的时候执行，一个类第一次被主动使用时，JVM才会对类进行初始化，静态代码块是在这个类被初始化的时候执行，所以静态代码块会先于匿名代码块被执行，并且只执行一次。</li>
+<li>编译器会将匿名代码块复制到每个构造方法的头部，所以会先于构造方法执行。</li>
+</ul>
 <h2 id="参考">参考</h2>
 <ul>
 <li><a href="https://www.bilibili.com/video/BV12J41137hu?p=73">遇见狂神说.  面向对象14：static关键字详解</a></li>
